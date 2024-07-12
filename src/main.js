@@ -75,7 +75,7 @@ export function initializeHeader() {
 export function generateQRCode() {
   if (typeof qrcode !== 'undefined') {
     const qr = qrcode(0, 'M');
-    qr.addData('https://example.com/rsvp');
+    qr.addData('https://docs.google.com/forms/d/1oru3XjnbAtoFqFCPkxyfPZ0tvkXDzpsiA2PpHDYUDWI/');
     qr.make();
     const qrcodeElement = document.getElementById('qrcode');
     if (qrcodeElement) {
