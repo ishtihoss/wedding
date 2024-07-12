@@ -2,15 +2,16 @@
     "name": "wedding-site",
     "version": "1.0.0",
     "description": "Wedding site for Dr. Shamika Shabnam and MD Ishtiaque Hossain",
-    "main": "src/main.js",
+    "main": "src/index.js",
+    "type": "module",
     "scripts": {
       "build": "npm run build:css && npm run build:js",
       "serve": "live-server public",
       "watch:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css --watch",
-      "build:js": "esbuild src/main.js --bundle --outfile=public/bundle.js --loader:.js=jsx",
-      "dev": "concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run serve\"",
+      "build:js": "dotenv -e .env -- esbuild src/index.js --bundle --outfile=public/bundle.js --loader:.js=jsx --format=esm --platform=browser --define:process.env.NODE_ENV=\\\"production\\\" --define:process.env.ANTHROPIC_API_KEY=\\\"$ANTHROPIC_API_KEY\\\"",
+      "dev": "dotenv -e .env -- concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run serve\"",
       "build:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css",
-      "watch:js": "esbuild src/main.js --bundle --outfile=public/bundle.js --loader:.js=jsx --watch"
+      "watch:js": "dotenv -e .env -- esbuild src/index.js --bundle --outfile=public/bundle.js --loader:.js=jsx --format=esm --platform=browser --define:process.env.NODE_ENV=\\\"development\\\" --define:process.env.ANTHROPIC_API_KEY=\\\"$ANTHROPIC_API_KEY\\\" --watch"
     },
     "keywords": [
       "wedding",
@@ -18,14 +19,16 @@
     ],
     "author": "MD Ishtiaque Hossain",
     "license": "ISC",
-    "dependencies": {
+    "devDependencies": {
       "autoprefixer": "^10.4.19",
-      "postcss": "^8.4.38",
+      "concurrently": "^8.2.2",
+      "dotenv-cli": "^7.4.2",
+      "esbuild": "^0.14.54",
+      "live-server": "^1.2.2",
+      "postcss": "^8.4.39",
       "tailwindcss": "^3.4.4"
     },
-    "devDependencies": {
-      "concurrently": "^8.2.2",
-      "live-server": "^1.2.2",
-      "esbuild": "^0.14.54"
+    "dependencies": {
+      "dotenv": "^16.4.5"
     }
   }

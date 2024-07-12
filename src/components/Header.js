@@ -1,13 +1,11 @@
 ﻿export default function Header() {
   return `
-    <div class="text-center">
-      <h1 class="font-script text-6xl text-primary mb-4 animate-float">Join Us in Celebration</h1>
-      <div class="w-32 h-1 bg-primary mx-auto mb-8 animate-expand"></div>
-      <h2 class="font-sans text-3xl text-gray-800 mb-12">
-        <span class="block mb-2">Dr. Shamika Shabnam</span>
-        <span class="block text-2xl text-primary">&</span>
-        <span class="block mt-2">MD Ishtiaque Hossain</span>
-      </h2>
-    </div>
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-dancing-script mb-4">Shamika & Ishtiaque</h1>
+      <div class="flex items-center justify-center">
+        <h2 id="headline" class="text-2xl font-roboto italic mr-2">Loading...</h2>
+        <i class="fas fa-heart text-red-500 text-2xl cursor-pointer" id="regenerateHeadline"></i>
+      </div>
+    </header>
   `;
 }

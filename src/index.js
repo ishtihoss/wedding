@@ -1,12 +1,13 @@
-import './styles.css';
-import App from './main.js';
+import { App, initializeHeader, generateQRCode } from './main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded event fired');
+  console.log('DOM content loaded');
   const appElement = document.getElementById('app');
   if (appElement) {
+    console.log('App element found, rendering content');
     appElement.innerHTML = App();
-    console.log('App content rendered');
+    initializeHeader();
+    generateQRCode();
   } else {
     console.error('Element with id "app" not found');
   }

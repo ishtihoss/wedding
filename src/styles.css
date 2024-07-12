@@ -1,57 +1,88 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@layer components {
-  .bg-wedding {
-    background-color: #f3f4f6; /* Temporary light gray background */
-  }
+.bg-wedding {
+  background-image: url('/wedding_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .font-script {
-    font-family: 'Great Vibes', cursive;
-  }
+.fireworks {
+  position: relative;
+}
 
-  .font-sans {
-    font-family: 'Montserrat', sans-serif;
-  }
+.fireworks::before,
+.fireworks::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  animation: fireworks 1.5s infinite;
+}
 
-  .text-primary {
-    @apply text-pink-600;
-  }
+.fireworks::before {
+  right: -10px;
+  animation-delay: -0.9s;
+}
 
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
+.fireworks::after {
+  left: -10px;
+  animation-delay: -1.2s;
+}
 
-  .animate-expand {
-    animation: expand 2s ease-in-out;
+@keyframes fireworks {
+  0% {
+    box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
   }
+  100% {
+    box-shadow: -50px -50px #ff00, 50px -50px #0f0, 50px 50px #00f, -50px 50px #ff0, -70px 0 #f0f, 70px 0 #0ff, 0 -70px #ff0, 0 70px #f00;
+  }
+}
+@keyframes fireworks {
+  0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
+  50% { width: 0.5vmin; opacity: 1; }
+  100% { width: var(--finalSize); opacity: 0; }
+}
 
-  .animate-fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-  }
+.fireworks::before,
+.fireworks::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle, #ff0 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, #ff5500 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, #ff0066 0.5vmin, #0000 0) 50% 100%,
+    radial-gradient(circle, #ff00ff 0.2vmin, #0000 0) 100% 50%,
+    radial-gradient(circle, #ff3300 0.3vmin, #0000 0) 50% 50%;
+  background-size: 0.6vmin 0.6vmin;
+  background-repeat: no-repeat;
+  animation: fireworks var(--duration) infinite;
+}
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
+.fireworks::before {
+  --x: -50%;
+  --y: -50%;
+  --initialY: 75%;
+  --initialSize: 0.5vmin;
+  --finalSize: 45vmin;
+  --duration: 6s;
+  transform: translate(-20vmin, var(--initialY)) rotate(40deg);
+}
 
-  @keyframes expand {
-    from { width: 0; }
-    to { width: 8rem; }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .elegant-border {
-    border: 2px solid theme('colors.pink.200');
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
-  }
-
-  .elegant-text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
+.fireworks::after {
+  --x: 50%;
+  --y: -50%;
+  --initialY: 75%;
+  --initialSize: 0.5vmin;
+  --finalSize: 35vmin;
+  --duration: 5s;
+  transform: translate(20vmin, var(--initialY)) rotate(-40deg);
 }

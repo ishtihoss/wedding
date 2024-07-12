@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Montserrat, sans-serif;
+  font-family: Roboto, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -588,73 +588,36 @@ video {
   }
 }
 
-.bg-wedding {
-  background-color: #f3f4f6;
-  /* Temporary light gray background */
+.pointer-events-none {
+  pointer-events: none;
 }
 
-.font-script {
-  font-family: 'Great Vibes', cursive;
+.absolute {
+  position: absolute;
 }
 
-.font-sans {
-  font-family: 'Montserrat', sans-serif;
+.relative {
+  position: relative;
 }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(219 39 119 / var(--tw-text-opacity));
+.bottom-0 {
+  bottom: 0px;
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+.left-0 {
+  left: 0px;
 }
 
-.animate-expand {
-  animation: expand 2s ease-in-out;
+.right-0 {
+  right: 0px;
 }
 
-.animate-fade-in {
-  animation: fadeIn 1.5s ease-in-out;
+.top-0 {
+  top: 0px;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes expand {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 8rem;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.elegant-border {
-  border: 2px solid #fbcfe8;
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
-}
-
-.elegant-text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+.z-10 {
+  z-index: 10;
 }
 
 .mx-auto {
@@ -666,10 +629,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -678,20 +637,16 @@ video {
   margin-bottom: 2rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -702,52 +657,61 @@ video {
   display: grid;
 }
 
-.h-1 {
-  height: 0.25rem;
+.h-12 {
+  height: 3rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-32 {
-  width: 8rem;
+.w-12 {
+  width: 3rem;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
+.w-16 {
+  width: 4rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/2 {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@keyframes expand {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 8rem;
-  }
-}
-
-.animate-expand {
-  animation: expand 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes float {
@@ -762,6 +726,10 @@ video {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {
@@ -780,17 +748,12 @@ video {
   gap: 3rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.bg-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -800,6 +763,10 @@ video {
 
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
+}
+
+.bg-wedding {
+  background-image: url('/wedding_background.jpg');
 }
 
 .bg-cover {
@@ -822,12 +789,8 @@ video {
   text-align: center;
 }
 
-.font-sans {
-  font-family: Montserrat, sans-serif;
-}
-
 .font-script {
-  font-family: Great Vibes, cursive;
+  font-family: "Dancing Script", cursive;
 }
 
 .text-2xl {
@@ -840,9 +803,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -859,19 +822,37 @@ video {
   font-weight: 600;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.text-gray-800 {
+.text-pink-200 {
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(251 207 232 / var(--tw-text-opacity));
+}
+
+.text-pink-300 {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 212 / var(--tw-text-opacity));
 }
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(219 39 119 / var(--tw-text-opacity));
+  color: rgb(74 85 104 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-2xl {
@@ -898,8 +879,101 @@ video {
   transition-duration: 500ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.bg-wedding {
+  background-image: url('/wedding_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fireworks {
+  position: relative;
+}
+
+.fireworks::before,
+.fireworks::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  animation: fireworks 1.5s infinite;
+}
+
+.fireworks::before {
+  right: -10px;
+  animation-delay: -0.9s;
+}
+
+.fireworks::after {
+  left: -10px;
+  animation-delay: -1.2s;
+}
+
+@keyframes fireworks {
+  0% {
+    box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  }
+
+  100% {
+    box-shadow: -50px -50px #ff00, 50px -50px #0f0, 50px 50px #00f, -50px 50px #ff0, -70px 0 #f0f, 70px 0 #0ff, 0 -70px #ff0, 0 70px #f00;
+  }
+
+  0% {
+    transform: translate(var(--x), var(--initialY));
+    width: var(--initialSize);
+    opacity: 1;
+  }
+
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+
+  100% {
+    width: var(--finalSize);
+    opacity: 0;
+  }
+}
+
+.fireworks::before,
+.fireworks::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle, #ff0 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, #ff5500 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, #ff0066 0.5vmin, #0000 0) 50% 100%,
+    radial-gradient(circle, #ff00ff 0.2vmin, #0000 0) 100% 50%,
+    radial-gradient(circle, #ff3300 0.3vmin, #0000 0) 50% 50%;
+  background-size: 0.6vmin 0.6vmin;
+  background-repeat: no-repeat;
+  animation: fireworks var(--duration) infinite;
+}
+
+.fireworks::before {
+  --x: -50%;
+  --y: -50%;
+  --initialY: 75%;
+  --initialSize: 0.5vmin;
+  --finalSize: 45vmin;
+  --duration: 6s;
+  transform: translate(-20vmin, var(--initialY)) rotate(40deg);
+}
+
+.fireworks::after {
+  --x: 50%;
+  --y: -50%;
+  --initialY: 75%;
+  --initialSize: 0.5vmin;
+  --finalSize: 35vmin;
+  --duration: 5s;
+  transform: translate(20vmin, var(--initialY)) rotate(-40deg);
 }
 
 .hover\:rotate-3:hover {
